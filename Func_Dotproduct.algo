@@ -1,0 +1,40 @@
+FUNCTION dot_product (v1 ,v2) :FLOAT; // by value 
+VAR
+i :INTEGER;
+ps:FLOAT;
+BEGIN
+FOR i FROM 0 TO v1.length-1 DO
+        ps:=v1[i]*v2[i] + ps
+END_FOR
+
+    RETURN ps ;
+END
+
+
+
+
+ALGORITHM V_PRODUCT
+VAR
+v1 , v2  : ARRAY_OF FLOAT[2];
+V : ARRAY_OF : ARRAY_OF FLOAT[2];[n];
+i,j,n:INTEGER;
+k : FLOAT;
+msg :STRING:='';
+
+
+BEGIN
+Write ("Please enter the number of vectors :" );
+read(n);
+    FOR i FROM 0 TO V.length-1   DO
+    FOR j FROM 0 TO V.length-1  DO
+        IF (k := dot_product(V[i],V[j]==0)) THEN
+            msg:='orthogonal';
+        else 
+            msg := 'non orthogonal';
+        END_IF
+    END_FOR  
+    END_FOR
+    END
+
+
+END
